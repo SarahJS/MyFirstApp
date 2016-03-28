@@ -12,6 +12,9 @@ import android.content.Intent;
 import android.widget.EditText;
 
 
+
+
+
 public class MyActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.example.sarahjs.myfirtapp.MESSAGE";
 
@@ -22,7 +25,7 @@ public class MyActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         // Creates a new intent object, get the EditText element,
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewByID(R.id.edit_message);
+        EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
